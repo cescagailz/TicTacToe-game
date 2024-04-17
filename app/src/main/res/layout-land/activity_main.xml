@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/player1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/player_1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/player2_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/player_2"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/player1Label"
+        app:layout_constraintEnd_toStartOf="@+id/player2Score" />
+
+    <TextView
+        android:id="@+id/player1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/player1Label"
+        app:layout_constraintStart_toEndOf="@+id/player1Label"
+        tools:text="20"/>
+
+    <TextView
+        android:id="@+id/player2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/player2_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="17" />
+
+
+
+    <!--Table Layout with 3 rows and each row with 3 buttons-->
+
+    <TableLayout
+        android:id="@+id/board_table_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:columnCount="3"
+        android:padding="@dimen/table_padding"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--Row 1-->
+
+        <!--Row 2-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_00"
+                style="@style/board_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="79dp"
+                tools:text="@string/zero" />
+
+            <Button
+                android:id="@+id/button_01"
+                style="@style/board_button_style"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                tools:text="@string/zero" />
+
+            <Button
+                android:id="@+id/button_02"
+                style="@style/board_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                tools:text="@string/ex" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button_10"
+                style="@style/board_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                tools:text="@string/ex" />
+
+            <Button
+                android:id="@+id/button_11"
+                style="@style/board_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp" />
+
+            <Button
+                android:id="@+id/button_12"
+                style="@style/board_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                tools:text="@string/zero" />
+
+        </TableRow>
+
+        <!--Row 3-->
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_20"
+                style="@style/board_button_style"
+                android:layout_width="78dp"
+                android:layout_height="74dp" />
+
+            <Button
+                android:id="@+id/button_21"
+                style="@style/board_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                tools:text="@string/ex" />
+
+            <Button
+                android:id="@+id/button_22"
+                style="@style/board_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="77dp"
+                tools:text="@string/zero" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="#00ACC1"
+        android:text="Play Again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/board_table_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

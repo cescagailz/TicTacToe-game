@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TicTacToes</string>
+    <string name="player_1">Player 1 [X]: </string>
+    <string name="player_2">Player 2 [O]: </string>
+    <string name="reset">Reset</string>
+    <string name="zero">O</string>
+    <string name="ex">X</string>
+    <string name="tile_played_already">This tile has already been played.</string>
+    <string name="game_finished">This round is over. Press Menu -> Reset to start a new game.</string>
+    <string name="player_wins">Player %1$d wins!</string>
+    <string name="nobody_won">Nobody won. Press Reset to start a new game</string>
+</resources>
